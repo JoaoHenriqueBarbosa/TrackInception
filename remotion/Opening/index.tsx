@@ -20,7 +20,7 @@ import { OpeningTitle } from "./Title";
 import { accentColorToGradient, type openingTitleSchema } from "./TitleImage";
 import { isMobileDevice } from "./devices";
 
-export const OPENING_SCENE_LENGTH = 130;
+export const OPENING_SCENE_LENGTH = 180; // Aumentado de 130 para 180 frames (6 segundos)
 export const OPENING_SCENE_OUT_OVERLAP = 10;
 
 const LAUNCH_SOUND = staticFile("rocket-launch.mp3");

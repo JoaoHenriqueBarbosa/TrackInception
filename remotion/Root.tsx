@@ -1,11 +1,13 @@
 import { Composition, Folder, Still } from "remotion";
 import { LanguagesEnum, compositionSchema, ogImageSchema } from "../src/config";
+import { SAMPLE_STARRED_REPOS } from "../src/server/random-sample-repos";
 import {
   TOP_LANGUAGES_DURATION,
   VIDEO_FPS,
   VIDEO_HEIGHT,
   VIDEO_WIDTH,
 } from "../types/constants";
+import { Stars } from "../vite/Home/Stars";
 import { MOCK_DATA } from "./mock-data";
 import { ContributionsScene } from "./Contributions";
 import { jonnysContributions } from "./Contributions/jonnys-contributions";
@@ -299,7 +301,7 @@ export const RemotionRoot: React.FC = () => {
         id="Wheel"
         component={Wheel}
         durationInFrames={100}
-        fps={FPS}
+        fps={VIDEO_FPS}
         height={500}
         width={500}
         schema={topDaySchema}
@@ -325,7 +327,7 @@ export const RemotionRoot: React.FC = () => {
         id="TopDay"
         component={TopDay}
         durationInFrames={100}
-        fps={FPS}
+        fps={VIDEO_FPS}
         height={200}
         width={1080}
         schema={topDaySchema}
@@ -564,7 +566,7 @@ export const RemotionRoot: React.FC = () => {
         id="Stars"
         component={Stars}
         durationInFrames={10 * 30}
-        fps={FPS}
+        fps={VIDEO_FPS}
         width={VIDEO_WIDTH}
         height={VIDEO_HEIGHT}
       />
@@ -572,7 +574,7 @@ export const RemotionRoot: React.FC = () => {
         id="Noise"
         component={Noise}
         durationInFrames={10 * 30}
-        fps={FPS}
+        fps={VIDEO_FPS}
         schema={noiseSchema}
         defaultProps={{
           translateX: 0,

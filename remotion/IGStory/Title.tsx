@@ -1,4 +1,4 @@
-import { Img } from "remotion";
+import { Img, staticFile } from "remotion";
 import { PANE_TEXT_COLOR } from "../TopLanguages/Pane";
 
 export const Title: React.FC<{
@@ -24,7 +24,7 @@ export const Title: React.FC<{
       }}
     >
       <Img
-        src={`https://github.com/${login}.png`}
+        src={staticFile("TrackInception.png")}
         style={{
           width: 60,
           height: 60,

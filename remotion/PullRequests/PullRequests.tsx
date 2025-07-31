@@ -61,7 +61,7 @@ export const PullRequests: React.FC<z.infer<typeof pullRequestsSchema>> = ({
   return (
     <AbsoluteFill
       style={{
-        transform: `scale(${scaleDivided + scale}) translateY(${translateY}px)`,
+        transform: `scale(${scaleDivided + scale}) translateX(calc(50% - 540px)) translateY(${translateY}px)`,
       }}
     >
       {isMobileDevice() ? null : (
@@ -73,19 +73,7 @@ export const PullRequests: React.FC<z.infer<typeof pullRequestsSchema>> = ({
         </Sequence>
       )}
       <AbsoluteFill style={style}>
-        <AbsoluteFill>
-          <Gradient gradient={accentColorToGradient()} />
-        </AbsoluteFill>
-        <AbsoluteFill
-          style={{
-            background: "black",
-            opacity: interpolate(
-              frame,
-              [durationInFrames - 20, durationInFrames],
-              [0, 1],
-            ),
-          }}
-        />
+
         <AbsoluteFill
           style={{
             opacity: interpolate(

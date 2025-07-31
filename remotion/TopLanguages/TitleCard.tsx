@@ -80,14 +80,7 @@ export const TopLanguagesTitleCard: React.FC<
           <TopLanguagesRocket rocket={rocket} />
         </AbsoluteFill>
       </Sequence>
-      <AbsoluteFill
-        style={{
-          transform:
-            random(randomizeOctocatSeed) > 0.5 ? `scaleX(-1)` : undefined,
-        }}
-      >
-        <TitleCardOctocat />
-      </AbsoluteFill>
+
       <AbsoluteFill
         style={{
           justifyContent: "center",

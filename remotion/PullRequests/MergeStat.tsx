@@ -4,7 +4,7 @@ import {
   PANE_BORDER,
   PANE_TEXT_COLOR,
 } from "../TopLanguages/Pane";
-import { MergeIcon } from "./MergeIcon";
+import { PlusIcon } from "lucide-react";
 import { MergeNumber } from "./MergeNumber";
 import { RemotionShineEffect } from "./RemotionShineEffect";
 import { PATH_TARGET } from "./make-random-path";
@@ -73,13 +73,11 @@ export const MergeStat: React.FC<{
           borderRadius={150}
         />
         <div style={inner}>
-          <MergeIcon />
-          <MergeNumber num={num} />
+          <MergeNumber num={52 + 68} />
+          <PlusIcon size={40} />
         </div>
         <div style={subtitle}>
-          pull {totalNum === 1 ? "request" : "requests"}
-          <br />
-          merged
+          Eventos de tracking auditados
         </div>
       </div>
     </div>

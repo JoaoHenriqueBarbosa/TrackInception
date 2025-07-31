@@ -70,7 +70,7 @@ export const TakeOff: React.FC<{
       <AbsoluteFill />
       <AbsoluteFill
         style={{
-          transform: "rotate(-90deg) translateX(-200px) translateY(495px)",
+          transform: "rotate(-90deg) translateX(200px) translateY(480px)",
         }}
       >
         <OffthreadVideo

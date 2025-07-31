@@ -78,7 +78,7 @@ export const TopLanguagesTitle: React.FC<z.infer<typeof topLanguagesTitle>> = ({
             lineHeight: 1.1,
           }}
         >
-          My Top <br /> {pluralize ? "Languages" : "Language"}
+          Tecnologias utilizadas
         </div>
       </div>{" "}
     </PaneEffect>

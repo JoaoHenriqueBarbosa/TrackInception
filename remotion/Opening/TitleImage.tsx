@@ -3,6 +3,7 @@ import {
   Img,
   interpolate,
   spring,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -25,7 +26,8 @@ export const accentColorToGradient = (): GradientType => {
 };
 
 export const getAvatarImage = (login: string) => {
-  return `https://github.com/${login}.png`;
+  // Usar imagem local em vez do GitHub
+  return staticFile("TrackInception.png");
 };
 
 export const TitleImage: React.FC<z.infer<typeof openingTitleSchema>> = ({

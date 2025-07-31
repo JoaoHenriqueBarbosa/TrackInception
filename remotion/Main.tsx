@@ -33,6 +33,7 @@ import {
 } from "./StarsAndProductivity";
 import { AllPlanets, getDurationOfAllPlanets } from "./TopLanguages/AllPlanets";
 import { TOP_LANGUAGES_EXIT_DURATION } from "./TopLanguages/PlaneScaleWiggle";
+import { PullRequests, PULL_REQUESTS_DURATION } from "./PullRequests/PullRequests";
 import { injectFont } from "./font";
 
 type Schema = z.infer<typeof compositionSchema>;
@@ -62,7 +63,8 @@ export const calculateDuration = ({
     CONTRIBUTIONS_SCENE_EXIT_TRANSITION +
     getStarsAndProductivityDuration({ starsGiven }) +
     OPENING_SCENE_LENGTH -
-    OPENING_SCENE_OUT_OVERLAP
+    OPENING_SCENE_OUT_OVERLAP +
+    PULL_REQUESTS_DURATION
   );
 };
 
@@ -159,13 +161,21 @@ export const Main: React.FC<Schema> = ({
             rocket={rocket}
           />
         </Series.Sequence>
+        <Series.Sequence
+          durationInFrames={PULL_REQUESTS_DURATION}
+          offset={-OPENING_SCENE_OUT_OVERLAP}
+        >
+          <PullRequests
+            totalPullRequests={totalPullRequests}
+          />
+        </Series.Sequence>
         {topLanguages ? (
           <Series.Sequence
             durationInFrames={getDurationOfAllPlanets({
               topLanguages,
               fps: VIDEO_FPS,
             })}
-            offset={-OPENING_SCENE_OUT_OVERLAP}
+            offset={-10} // Pequena sobreposição para transição suave
           >
             <AllPlanets
               corner={corner}

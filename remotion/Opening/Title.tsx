@@ -39,7 +39,7 @@ export const OpeningTitle: React.FC<
     config: {
       damping: 200,
     },
-    delay: 50,
+    delay: 30, // Reduzido de 50 para 30 - aparece mais cedo
     durationInFrames: 50,
   });
 
@@ -114,7 +114,7 @@ export const OpeningTitle: React.FC<
           <TitleImage startAngle={startAngle} login={login} rocket={rocket} />
           <div>
             <div>
-              This is my <strong>#GitHubUnwrapped</strong>
+              Projeto Stargate de <strong>John Enrique</strong>
             </div>
             <div style={title}>{login}</div>
           </div>
